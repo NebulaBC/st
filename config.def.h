@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Comic Mono:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 
@@ -75,7 +75,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "screen-256color";
 
 /*
  * spaces per tab
@@ -117,8 +117,8 @@ static const char *colorname[] = {
     [15] = "#ffffff", /* white   */
                                    
     /* special colors */
-    [256] = "#282a36", /* background */
-    [257] = "#f8f8f2", /* foreground */
+    [256] = "#112c27", /* background */
+    [257] = "#9D8420", /* foreground */
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
@@ -192,8 +192,6 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
-	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},              0, /* !alt */ -1 },
-        { XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},              0, /* !alt */ -1 },
 };
 
 /* Internal keyboard shortcuts. */
